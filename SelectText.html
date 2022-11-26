@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Form Filler</title>
+
+    <script  rel="stylesheet" src="./js/checkPathEChange.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/SelectText.css">
+    <link rel="stylesheet" type="text/css" href="./css/spinner.css">
+    <link rel="stylesheet" type="text/css" href="./css/img.css">
+
+
+    <!-- <script type="text/javascript" src="./js/GJDcheckIfChecked.js"></script> -->
+
+
+    <script type="text/javascript" src="./js/SelectText.js"></script>
+
+
+
+
+    <script type="text/javascript" src="./js/GetJobDataJason.js"></script>
+    <script type="text/javascript" src="./js/Cancel.js"></script>
+
+    <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/SelectText2.css"> -->
+    
+
+    
+
+</head>
+<body id="BellowBody">
+    <div class="text">
+        
+            <h1>Drag on the text bellow to select the area where differet </h1> 
+            <h1>text will be separate into different folders</h1>
+            <h1>while the same text in the location will be in the same folder</h1>
+            <h1 id="datafillNameID"></h1>
+            
+
+            
+    </div>
+
+    <div id="foreGroundImage" class="containingArea centered MainLogo noClickImg">
+
+        <img src="_images/LogInImg.png" onclick="hideImage()" alt="MainLogo" >
+
+    </div>
+    <!-- <div>
+        <button type="button" class="btn optionsbtn right btn-secondary" onclick="GetJobDataJason()" >YES</button>
+    </div>
+    <div>
+        <button type="button" class="btn optionsbtn left btn-secondary" onclick="Cancel()" >NO</button>
+    </div>
+     -->
+
+
+
+    <script>placeDatafillName()</script>
+
+    <script>
+
+        let jquerypath = path.join(__dirname, './js/jquery');
+        window.jQuery = window.$ = require(jquerypath);
+
+    </script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

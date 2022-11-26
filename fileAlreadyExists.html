@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="utf-8"> -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Form Filler</title>
+    <script  rel="stylesheet" src="./js/checkPathEChange.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/FileAlreadyExists.css">
+    
+    
+
+
+    <!-- <script type="text/javascript" src="./js/DragnDrop.js"></script> -->
+
+    <script type="text/javascript" src="./js/RerunReturnFromSameFileInside.js"></script>
+
+
+    <script type="text/javascript" src="./js/Cancel.js"></script>
+
+    <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="./css/spinner.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="./css/img.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/spinner2.css">
+
+</head>
+<body id="BellowBody">
+    <div class="text">
+        
+            <h1>Filename already exists in the database.</h1>
+            <h1>Click OK to make a new rule for this file.</h1>
+            <h1>Press Cancel to quit this process. </h1>
+            <h1>If this file is new,</h1>
+            <h1>it needs to be renamed to</h1>
+            <h1>continue without error.</h1>
+        
+    </div>
+
+    <div id="foreGroundImage" class="containingArea centered MainLogo noClickImg">
+
+        <img src="_images/LogInImg.png" onclick="hideImage()" alt="MainLogo" >
+
+    </div>
+    <div>
+        <button type="button" class="btn optionsbtn right btn-secondary" onclick="RerunReturnFromSameFileInside()" >OK</button>
+    </div>
+    <div>
+        <button type="button" class="btn optionsbtn left btn-secondary" onclick="Cancel()" >Cancel</button>
+    </div>
+    
+
+
+
+
+    <script>
+
+        let jquerypath = path.join(__dirname, './js/jquery');
+        window.jQuery = window.$ = require(jquerypath);
+
+    </script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

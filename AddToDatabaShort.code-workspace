@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "CSSAutoFormFiller",
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

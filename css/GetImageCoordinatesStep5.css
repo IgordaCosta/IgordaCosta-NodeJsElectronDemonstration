@@ -1,0 +1,230 @@
+
+html,body{ 
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    height: 100%;
+    background-color: black;
+
+}
+
+  
+  * {
+    box-sizing: border-box;
+  }
+
+
+.table{
+    min-height: 0;
+    
+    position: relative;
+    overflow: scroll;
+    table-layout: fixed;
+    width:500px;
+    
+    
+}
+
+th,hd{
+
+    width: 300px;
+
+}
+
+
+
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.topPartSize{
+    height:20vh;
+    margin-top: 3vh;
+
+    position: relative;
+    
+    
+
+}
+
+
+
+
+
+.progress{
+    margin-right: 0.5vw;
+}
+
+.spinner{
+    width: 10rem; 
+    height: 10rem;
+    margin-left: 38vw;
+    position: fixed;
+    top: 20vh;
+
+}
+
+.down{
+    /* top: 44vh; */
+    top: 62vh;
+    
+}
+
+
+
+
+.hidden {
+    display: none;
+    /* make an hidden attribute for the buttons
+     */
+}
+
+
+.scrollON{
+
+    overflow-x: scroll; 
+    overflow-y: scroll;
+}
+
+.scrolloff{
+
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+
+.text{
+    opacity:1;
+    color: white;
+    text-align: center;
+    margin-top:3vh;
+    margin-bottom: 3vh;
+
+}
+
+
+.wrapper {
+    display: inline-block;
+    height: 27vh;
+    width: 100vw;
+    /* padding: 5px; */
+    /* margin: 5px; */
+    background: lightgray;
+    padding-left: 1vh;
+    padding-top: 1vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 0vw;
+    margin-right: 1vw;
+  }
+  
+.wrapper #DocumentToClick {
+    /* height: 100%; */
+
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    top: auto;
+    right: auto;
+    opacity: 1;
+    object-fit: contain;
+    position: relative;
+  }
+
+
+.ScrollImage{
+
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+
+}
+
+
+
+.buttons{
+    width:100vw;
+    position: fixed;
+    bottom: 0;
+    
+    
+}
+
+.row{
+    margin-left: 0.1vw;
+    margin-bottom: 2vh;
+}
+
+.right{
+    position: fixed;
+    right: 0px;
+    margin-right: 1.8vw;
+}
+
+.btn{
+    width: 40vw;
+}
+
+
+/* .ChooseSize{
+
+
+    z-index: 10000;
+
+
+} */
+
+
+div {
+    margin-bottom: 10px;
+  }
+  
+input:invalid+span:after {
+content: '✖';
+padding-left: 5px;
+}
+
+input:valid+span:after {
+content: '✓';
+padding-left: 5px;
+}
+
+
+.WordSizeForm{
+
+/* width: 20vw; */
+
+/* background-color: blue; */
+color: white;
+
+
+}
+
+
+/* .WordSizeHeight{
+
+    position: fixed;
+
+    bottom: 0vh;
+
+
+} */
+
+
+
+.SmallerButton{
+
+
+width: 20vw;
+
+}
+
+
+

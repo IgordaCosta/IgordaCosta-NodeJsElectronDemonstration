@@ -1,0 +1,43 @@
+.spinner{
+    width: 10rem; 
+    height: 10rem;
+    
+    position: fixed;
+    top: 37vh;
+    right: 42vw;
+    z-index: 999999;
+    color: white;
+    pointer-events: none;
+
+    /* changes are bellow */
+    /* background-color: black; */
+    
+}
+
+
+
+
+
+
+
+.down{
+    top: 62vh;
+}
+
+
+.spinnerInit{
+    width: 10rem; 
+    height: 10rem;
+    margin-left: 38vw;
+    position: fixed;
+    top: 20vh;
+    pointer-events: none;
+
+}
+
+.downInit{
+    top: 44vh;
+
+    /* top: 62vh; */
+    
+}

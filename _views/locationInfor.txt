@@ -1,0 +1,3 @@
+here is to palace each html in the page used. This was not done in 
+my project, the html files were placed in the main folder location
+maybe later on I can change such. the original files deleted here where clima.html, fibonacci.html and imc.html

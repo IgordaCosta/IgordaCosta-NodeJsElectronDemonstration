@@ -1,0 +1,1 @@
+let imageFolderLocation='_clientImageFiles\\';

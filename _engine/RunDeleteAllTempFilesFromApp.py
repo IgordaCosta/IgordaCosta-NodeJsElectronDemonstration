@@ -1,0 +1,4 @@
+import DeleteAllTempFiles
+
+
+DeleteAllTempFiles.DeleteAllTempFiles()

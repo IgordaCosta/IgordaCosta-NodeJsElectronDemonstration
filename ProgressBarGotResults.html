@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="utf-8"> -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Form Filler</title>
+    <script  rel="stylesheet" src="./js/checkPathEChange.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/FileAlreadyExists.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/spinner.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/img.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/ProgressbarResultsFixed.css">
+
+
+    <link rel="stylesheet" type="text/css" href="./css/all.css">
+
+
+    
+
+    <!-- <link rel="stylesheet" type="text/css" href="./css/spinnerProgressbar.css"> -->
+
+    
+
+
+    
+    <!-- <script type="text/javascript" src="./js/DragnDrop.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/Cancel.js"></script> -->
+
+    <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+
+</head>
+<body id="BellowBody">
+    <script src="./js/fontawesome.js"></script>
+
+    <div class="spinner2 down2 awesome">
+        <h1>Loading...</h1>
+    </div>
+    <div class="progressLocation2">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        </div>
+    </div>
+    
+    <div class="spinner2 circleSpiner2 spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <div class="text2">
+
+        <h1>While you wait, </h1>
+        <h1>continue using your Windows 10 machine</h1>
+        <h1>by trying this Shortcuts.</h1>
+
+        
+        <h1 class="important" >
+            <i class="fas fa-exclamation-triangle"></i>
+            Take a picture of this 
+        </h1>
+
+        <h1 class="important rightImportant" >
+            shortcuts before you start!
+            <i class="fas fa-exclamation-triangle"></i>
+        </h1>   
+        
+
+    </div>
+
+    <div class="orderedList2">
+        
+        <ul>
+            <li>
+                <h4>Windows + Ctrl + D – Open new virtual desktop</h4>
+            </li>
+            
+            <li>
+                <h4>Windows + Ctrl + F4 – Close virtual desktop</h4>
+            </li>
+
+            <li>
+                <h4>Windows + Ctrl + arrow keys – Navigate between virtual desktops</h4>
+            </li>
+
+        </ul>
+        
+
+        
+
+    </div>
+    
+    <div class="TopProgressLeft">
+        <h7>item.xlsx XXXXXXXXXXXXXXXXXXXXXX</h7>
+    </div>
+
+    <div class="TopProgressRight">
+        <h7> 1/10 completed XXXXXXXXXXXXXXXXXXXXXX</h7>
+    </div>
+
+    <div class="BottomProgressRight">
+        <h7>50% completed XXXXXXXXXXXXXXXXXXXXXX</h7>
+    </div>
+
+
+    <div>
+        <button type="button" class="btn optionsbtn right btn-secondary" onclick="LMFAddInfoExcel()" >Check Populated Folder</button>
+    </div>
+    
+
+    <div id="foreGroundImage" class="containingArea centered MainLogo noClickImg">
+
+        <img src="_images/LogInImg.png" onclick="hideImage()" alt="MainLogo" >
+    
+    </div>
+    
+    <script>
+
+        let jquerypath = path.join(__dirname, './js/jquery');
+        window.jQuery = window.$ = require(jquerypath);
+
+    </script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/93b6963a8a.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="./js/fontawesome.js"></script> -->
+</body>
+</html>

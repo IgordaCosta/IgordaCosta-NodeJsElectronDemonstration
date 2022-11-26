@@ -1,0 +1,70 @@
+
+
+.scrollON{
+
+    overflow-x: scroll; 
+    overflow-y: scroll;
+}
+
+.scrolloff{
+
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+
+
+
+.wrapper {
+    display: inline-block;
+    height: 89vh;
+    width: 100vw;
+    /* padding: 5px; */
+    /* margin: 5px; */
+    background: lightgray;
+    padding-left: 1vh;
+    padding-top: 1vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 0vw;
+    margin-right: 1vw;
+  }
+  
+.wrapper #DocumentToClick {
+    /* height: 100%; */
+
+
+
+
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    top: auto;
+    right: auto;
+    opacity: 1;
+    object-fit: contain;
+    position: relative;
+  }
+
+
+.ScrollImage{
+
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+
+}
+
+.left{
+    position: fixed;
+    left: 0px;
+    margin-left: 1.8vw;
+
+    
+}
+
+

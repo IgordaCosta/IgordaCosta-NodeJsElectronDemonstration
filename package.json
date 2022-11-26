@@ -1,0 +1,32 @@
+{
+  "name": "autoformfiller",
+  "version": "1.0.0",
+  "description": "Fills forms automatically",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "Auto",
+    "Form",
+    "Filler"
+  ],
+  "author": "Igor Meira da Costa",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.7"
+  },
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "cross-env": "^7.0.2",
+    "electron-builder": "^22.7.0",
+    "iconv": "^3.0.0",
+    "iconv-lite": "^0.6.0",
+    "jquery": "^3.5.1",
+    "log4js": "^6.3.0",
+    "python-shell": "^2.0.1",
+    "requirejs": "^2.3.6",
+    "sqlite3": "^5.0.0"
+  }
+}

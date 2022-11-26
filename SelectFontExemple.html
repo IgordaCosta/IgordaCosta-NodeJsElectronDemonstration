@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>jQuery Fontselect Plugin Example</title>
+  
+  
+
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fontselect.css">
+	
+
+<script>
+    try{
+      let path = require("path");
+      let jquerypath = path.join(__dirname, './js/jquery');
+      window.jQuery = window.$ = require(jquerypath);
+    } catch (e){
+      console.log(e);
+      path = require("path");
+      let jquerypath = path.join(__dirname, './js/jquery');
+      window.jQuery = window.$ = require(jquerypath);
+    }
+       
+</script>
+
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<script src="./js/jquery.fontselect.js"></script>
+<script type="text/javascript" src="./js/fontSelect.js"></script>
+
+
+</head>
+<body id="BellowBody">
+	
+    
+    <p>Select a font to see how it looks</p>
+
+    <input id="font4" type="text">
+
+    <script>
+
+        fontSelect()
+        
+    </script>
+
+	
+
+</body>
+</html>

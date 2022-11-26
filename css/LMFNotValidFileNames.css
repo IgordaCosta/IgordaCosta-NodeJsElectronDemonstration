@@ -1,0 +1,55 @@
+body{
+    background: black;
+    color:white;
+    text-align: center;
+}
+
+
+.left{
+    position: fixed;
+    left: 2vw;
+    bottom:2vh;
+    width: 40vw;
+    
+}
+
+.right{
+    position: fixed;
+    right: 2vw;
+    bottom:2vh;
+    width: 40vw;
+    
+}
+
+.text{
+    position: fixed;
+    top: 44vh;
+    left:13vw;
+}
+
+.table{
+    min-height: 0;
+    
+    position: relative;
+    overflow: scroll;
+    
+    
+}
+
+.topPartSize{
+    height:175px;
+    margin-top: 3vh;
+
+    position: relative;
+    
+    
+
+}
+
+.hidden {
+    display: none;
+    /* make an hidden attribute for the buttons
+     */
+}
+
+

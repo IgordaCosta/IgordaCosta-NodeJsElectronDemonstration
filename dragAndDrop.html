@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- <meta charset="utf-8"> -->
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Form Filler</title>
+    <script  rel="stylesheet" src="./js/checkPathEChange.js"></script>
+    <script type="text/javascript" src="./js/DragnDrop.js"></script>
+    <script type="text/javascript" src="./js/Cancel.js"></script>
+    <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/DragnDrop.css">   
+    <link rel="stylesheet" type="text/css" href="./css/img.css">
+    <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+    <link rel="stylesheet" type="text/css" href="./css/AlertBox.css">
+    <link rel="stylesheet" type="text/css" href="./css/spinner.css">
+  
+</head>
+
+<body class= 'drag-file dragLocation' id= 'BellowBody'>
+
+    <div id='AllNormalItems'>
+
+    <div>
+
+        <h1>Browse using the file input and click OK or</h1>
+        <br>
+        <h1>Drag and Drop a supported </h1>
+        <br>
+        <h1>pdf or image file inside this window</h1> 
+        <br>
+        <h1> to add it to the database</h1>
+       
+    </div>
+
+    <div id="TempFile" class="alert hidden">
+
+        <span class="closebtn" onclick="this.parentElement.classList.add('hidden');">&times;</span>
+            Filename starts with temp_! This filename is not allowed! 
+
+    </div> 
+
+    <div id="ExcelFile" class="alert hidden">
+        
+        <span class="closebtn" onclick="this.parentElement.classList.add('hidden');">&times;</span>
+        This is NOT an Excel file! Check if its one of the extensions mentioned above.
+        
+    </div> 
+
+    <div id="fileLocation" class="input-group">
+
+        <div class="custom-file">
+
+            <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+  
+        </div>
+  
+        <div class="input-group-append">
+  
+            <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" onclick="DragnDrop3()">OK</button>
+  
+        </div>
+  
+    </div>
+
+    <div id="foreGroundImage" class="containingArea centered MainLogo noClickImg">
+
+        <img src="_images/LogInImg.png" onclick="hideImage()" alt="MainLogo" >
+
+    </div>
+
+    <div>
+
+        <button type="button" class="btn optionsbtn left btn-secondary" onclick="Cancel()" >Cancel</button>
+
+    </div>
+
+    </div>
+
+    <script>
+
+        DragnDrop2()
+    
+    </script>
+    <script>
+
+        let jquerypath = path.join(__dirname, './js/jquery');
+        window.jQuery = window.$ = require(jquerypath);
+
+    </script>
+
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

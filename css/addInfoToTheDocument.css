@@ -1,0 +1,115 @@
+
+html,body{ 
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    height:600px;
+    background-color: black;
+
+}
+
+
+.table{
+    min-height: 0;
+    
+    position: relative;
+    overflow: scroll;
+    
+}
+
+
+
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+
+.topPartSize{
+    height:400px;
+    margin-top: 3vh;
+
+    position: relative;
+    
+    
+
+}
+
+
+
+.buttons{
+    width:100vw;
+    position: fixed;
+    bottom: 0;
+    
+    
+}
+
+.row{
+    margin-left: 0.1vw;
+    margin-bottom: 2vh;
+}
+
+.right{
+    position: fixed;
+    right: 0px;
+    margin-right: 1.8vw;
+}
+
+.btn{
+    width: 40vw;
+}
+
+.progress{
+    margin-right: 0.5vw;
+}
+
+.spinner{
+    width: 10rem; 
+    height: 10rem;
+    margin-left: 38vw;
+    position: fixed;
+    top: 20vh;
+
+}
+
+.down{
+    /* top: 44vh; */
+    top: 62vh;
+    
+}
+
+
+
+
+.hidden {
+    display: none;
+    /* make an hidden attribute for the buttons
+     */
+}
+
+
+.scrollON{
+
+    overflow-x: scroll; 
+    overflow-y: scroll;
+}
+
+.scrolloff{
+
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+
+.text{
+    opacity:1;
+    color: white;
+    text-align: center;
+    margin-top:3vh;
+    margin-bottom: 3vh;
+
+}
+
+
+

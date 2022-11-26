@@ -1,0 +1,119 @@
+<head>
+  <!-- <meta charset="utf-8"> -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>Auto Form Filler</title>
+  
+  <link rel="icon" href="_images/python-icon.ico"/>
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="./css/img.css">
+  <link rel="stylesheet" type="text/css" href="./css/gotResultsIndexOut.css">
+  <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+  <link rel="stylesheet" type="text/css" href="./css/spinner.css">
+
+  <base href="app://./" />  
+
+  <script type="text/javascript" src="./js/Cancel.js"></script>
+  <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+  <script type="text/javascript" src="./js/indexFunctions.js"></script>
+  <script type="text/javascript" src="./js/DragnDrop.js"></script>
+
+
+</head>
+
+<body id="BellowBody">
+ 
+    <div class="screen parentofOverflow">
+
+        <div class="container-fluid topPartSize scrolloff">
+
+          <div id="foreGroundImage" class="containingArea centered MainLogo noClickImg">
+
+              <img src="_images/LogInImg.png" onclick="hideImage()" alt="MainLogo" >
+
+          </div>
+
+          <div class="content-wrapper">
+
+              <table class="table table-dark table-striped scrollableArea" onclick="UnhideScroll()">
+
+                <thead>
+
+                  <tr>
+
+                    <th scope="col">#</th>
+                    <th scope="col">Choice</th>
+                    <th scope="col">Job_Name</th>
+                    <th scope="col">File_Saved_Location</th>
+                    
+                  </tr>
+
+                </thead >
+
+                <tbody id="tableData">
+
+                  <script>getDatabaseData();</script>  
+                  
+                </tbody>
+                
+              </table>
+
+            </div>
+
+          </div>                   
+
+        </div>
+
+    <div class= "buttons container-fluid">
+
+      <div class= 'row AboveAll'>
+
+        <div class="col-xs-4"></div>
+
+          <button type="button" class="btn optionsbtn left btn-secondary" onclick="DragnDrop()">Add to Database</button>
+          <button type="button" class="btn optionsbtn right btn-secondary"onclick="GetJobData()">Check Job Data</button>   
+
+      </div>
+
+        <div class= 'row top'>
+  
+          <div class="col-xs-4"></div>
+  
+            <button type="button" class="btn optionsbtn left btn-secondary" onclick="DeleteFromDatabase()" >Delete From Database</button>
+            <button type="button" class="btn optionsbtn right btn-secondary"onclick="LoadMultipleFilesFromDatabase()">Load to Multiple Files</button>   
+    
+          </div>
+
+      <div class="row bottom">
+    
+        <div class="col-xs-4"></div>
+    
+          <button type="button" class="btn optionsbtn left btn-secondary" onclick="OtherFunctions()">Other Functions</button>
+          <button type="button" class="btn optionsbtn right btn-secondary" onclick="LoadSingleQRFileFromDatabase()">Load to Single File</button>   
+     
+        </div>
+
+    </div>  
+  
+  </div>
+
+  <script>
+    try{
+      let path = require("path");
+      let jquerypath = path.join(__dirname, './js/jquery');
+      window.jQuery = window.$ = require(jquerypath);
+    } catch (e){
+      console.log(e);
+      path = require("path");
+      let jquerypath = path.join(__dirname, './js/jquery');
+      window.jQuery = window.$ = require(jquerypath);
+    }
+      
+  </script>
+
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  
+</body>

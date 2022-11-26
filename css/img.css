@@ -1,0 +1,36 @@
+
+img{
+    width: 50vw;
+    height: auto;
+    position: fixed;
+    top: 15vh;
+    right: 25vw;
+    z-index: 9999;
+    opacity:0.1;
+    
+
+}
+
+/* noClickImg{
+    pointer-events: none
+
+} */
+
+#FullBlackBackground.blackBackground{
+
+    z-index: 99999!important;
+    position: fixed!important;
+
+
+     height: 100%!important;
+     width: 100vw!important;
+
+
+    background-position: center!important;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    opacity:1.0!important;
+    background-color: black;
+
+
+}

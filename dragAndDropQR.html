@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Form Filler</title>
+    <script  rel="stylesheet" src="./js/checkPathEChange.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/DragnDrop.css">
+    <link rel="stylesheet" type="text/css" href="./css/AlertBox.css">
+    <link rel="stylesheet" type="text/css" href="./css/spinner.css">
+    <link rel="stylesheet" type="text/css" href="./css/img.css">
+
+    <script type="text/javascript" src="./js/DragnDropQR.js"></script>
+    <script type="text/javascript" src="./js/Cancel.js"></script>
+
+    <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+
+
+    <!-- <script type="text/javascript"> 
+
+        $(document).ready(function(){
+        $('#butttoncloseid').click(function(){
+        var databack = $("#mymodal #exampleinputemail1").val().trim();
+    
+        });
+
+    });
+
+    </script> -->
+
+
+</head>
+<!-- <body id="drag-file"> -->
+<body class= 'drag-file dragLocation' id= 'BellowBody'>
+
+    <div>
+        <h1>Browse using the file input for .txli file and click OK or</h1>
+        <br>
+        <h1>Drag and Drop your .txli file inside this window</h1> 
+        <br>
+        <h1> to add it to the database</h1>
+        <br>
+        <h3>Check for the .txli in the file extesions</h3>
+        <!-- <h3>.jpg , .xlsm, .xlsb, .xlam , .xltx, .xltm, .xls, .xla, .xlt, .xlm and .xlw</h3> -->
+    </div>
+    <div id="TempFile" class="alert hidden">
+
+        <span class="closebtn" onclick="this.parentElement.classList.add('hidden');">&times;</span>
+        Filename starts with temp_! This filename is not allowed! 
+
+    </div> 
+    <div id="ExcelFile" class="alert hidden">
+        
+        <span class="closebtn" onclick="this.parentElement.classList.add('hidden');">&times;</span>
+        This is NOT an .txli file! Check if its a supported .txli extension file.
+        
+    </div> 
+
+
+    <div id="NotValidQRFile" class="alert hidden">
+        
+        <span class="closebtn" onclick="this.parentElement.classList.add('hidden');">&times;</span>
+        The file choosen for .txli is not supported. Please choose a supported .txli file and click OK to continue.
+        
+    </div> 
+
+
+
+    <div id="fileLocation" class="input-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+          <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+        </div>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" onclick="DragnDrop3()">OK</button>
+        </div>
+      </div>
+
+
+
+
+
+    <div id="foreGroundImage" class="containingArea centered MainLogo noClickImg">
+
+        <img src="_images/LogInImg.png" onclick="hideImage()" alt="MainLogo" >
+
+    </div>
+    <div>
+        <button type="button" class="btn optionsbtn left btn-secondary" onclick="Cancel()" >Cancel</button>
+    </div>
+
+    <script>
+        DragnDrop2()
+    </script>
+
+    <script>
+
+        let jquerypath = path.join(__dirname, './js/jquery');
+        window.jQuery = window.$ = require(jquerypath);
+
+    </script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

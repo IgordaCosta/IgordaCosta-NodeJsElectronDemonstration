@@ -1,0 +1,169 @@
+<head>
+  
+  <!-- <meta charset="utf-8"> -->
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>Auto Form Filler</title>
+  
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  
+  <!-- <link rel="stylesheet" type="text/css" href="./css/AlertBox.css"> -->
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="./css/GetImageCoordinatesStep4.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/jquery.fontselect.css">
+
+
+  <link rel="icon" href="_images/python-icon.ico"/>
+
+  <base href="app://./" />  
+
+  <script  rel="stylesheet" src="./js/checkPathEChange2.js"></script>
+
+  <script type="text/javascript" src="./js/indexFunctions.js"></script>
+
+  <script type="text/javascript" src="./js/Cancel.js"></script>
+
+  <script type="text/javascript" src="./js/GetImageCoordinates4.js"></script>
+
+  <script type="text/javascript" src="./js/GetImageCoordinates4CheckClick.js"></script>
+  <script type="text/javascript" src="./js/fontSelect.js"></script>
+
+  <script type="text/javascript" src="./js/UnhideScrollAndImg.js"></script>
+
+
+  
+
+  <script>
+
+    let path = require("path");
+    let jquerypath = path.join(__dirname, './js/jquery');
+    window.jQuery = window.$ = require(jquerypath);
+    
+  </script>
+
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+
+  <script src="./js/jquery.fontselect.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="./css/NoClick.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/img.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/spinner.css">
+
+
+</head>
+
+<body id="BellowBody" >
+  
+    <!-- <div id = "createImageGetData" class= 'hidden'>    
+        <div>
+            <div class=text>
+
+                <h1>Choose a Word size and font then</h1>
+                <h1>click Try configuration to see how it will look.</h1>
+                <h1>Click OK when you are happy with your choice</h1>
+                <h1>or click Cancel to cancel the operation</h1>
+            
+            </div>
+
+            <form class= 'row WordSizeForm'>
+
+                <div class= "container-fluid">
+
+                    <div class="row">
+                    
+                        <div class="col-xs-4">
+
+                            <label for="wordSize">Word size (${FontSize}):</label>
+                            <input id="wordSize" class="btn optionsbtn SmallerButton left btn-secondary" type="number" name="wordSize"  min="1" max="1000" required>
+                            <span class="validity"></span>
+
+                        </div>
+
+                        <div class="col-xs-4">
+
+                            <p id = "ShowFontTypeHere" class= "right" >This is how the font looks when it is changed</p>
+
+                        </div>
+                            
+                    </div>
+                    
+                </div> 
+      
+            
+            </form>
+
+            <form id = "FontSelector" class="needs-validation" novalidate>
+    
+                <div class= "container-fluid">
+            
+
+                    <div class="row">
+                
+                        <div class="col-xs-4"></div>
+
+                            <input class= "btn optionsbtn left" id="font4" type="text">
+
+                    </div>
+
+                        <div class="col-xs-4">
+
+                            <button id= "FontSelector" type="button" class="btn optionsbtn right btn-secondary" onclick="PlaceChoosenSizeInDb()">Try configuration</button>
+                    
+                        </div>
+                
+                </div>
+
+
+               
+
+            </form>
+
+
+            <form class="needs-validation" novalidate>
+        
+                <div class= "buttons container-fluid">
+
+                    <div class="row bottom">
+                
+                        <div class="col-xs-4"></div>
+
+                            <button type="button" class="btn optionsbtn left btn-secondary" onclick="Cancel()">Cancel</button>              
+                            <button type="button" class="btn optionsbtn right btn-secondary" onclick="GetImageCoordinates4CheckClick()">OK</button> 
+
+                        </div>
+                    
+                    </div>
+                
+                </div>  
+
+            </form>
+        
+        </div>
+
+        <div id="ImageDocument" class="wrapper scrollON hidden">
+
+            <img class='ScrollImage' id="DocumentToClick" src="${newFileLocation}" alt="Document Image" >
+
+        </div>
+
+    </div> -->
+
+    <script>
+
+        // fontSelect()
+
+        GetImageCoordinates4()
+
+    </script>
+  
+</body>

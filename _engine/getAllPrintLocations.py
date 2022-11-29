@@ -170,8 +170,8 @@ def getAllPrintLocations(extensionFilter = '', dataType = '', OtherString = ''):
 
 
 
-OtherString = '.py'
+OtherString = '<link'
 
-extensionFilter = 'js'
+extensionFilter = 'html'
 
 getAllPrintLocations(extensionFilter = extensionFilter, OtherString = OtherString)

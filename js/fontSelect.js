@@ -143,6 +143,10 @@ async function fontSelect3(resultGotten){
         document.getElementById("ImageDocument").classList.remove('hidden');
 
         document.getElementById("OntopOfAll").classList.add('hidden')
+
+        document.getElementById("AllNormalItems").classList.remove('hidden');
+
+        
         }catch(error){}
     
       
@@ -174,7 +178,9 @@ async function fontSelect3(resultGotten){
 
     document.getElementById("ImageDocument").classList.remove('hidden');
 
-    document.getElementById("OntopOfAll").classList.add('hidden')
+    document.getElementById("OntopOfAll").classList.add('hidden')/
+
+    document.getElementById("AllNormalItems").classList.remove('hidden');
 
     }catch(error){}
    

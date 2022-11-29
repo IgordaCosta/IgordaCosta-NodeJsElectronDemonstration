@@ -20,7 +20,9 @@ function CreateImageWithMarkerReturn2(newFileLocation, FontSize) {
 
     // console.log("newFileLocation inside new function");
 
-    document.body.innerHTML = `
+    // document.body.innerHTML = `
+
+    document.getElementById("AllNormalItems").innerHTML = `
 
     <div id = "createImageGetData" class= 'hidden'">    
         <div>

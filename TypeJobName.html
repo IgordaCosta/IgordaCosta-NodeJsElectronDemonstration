@@ -6,6 +6,8 @@
 
     <title>Auto Form Filler</title>
     
+    <script type="text/javascript" src="./js/AddJquery.js"></script>
+    
     <script  type="text/javascript" src="./js/checkPathEChange.js"></script>    
     <script type="text/javascript" src="./js/DragnDrop.js"></script>
     <script type="text/javascript" src="./js/CheckIfNameExists.js"></script>
@@ -74,15 +76,9 @@
 
     </div>
     
-    <script>
-
-        let jquerypath = path.join(__dirname, './js/jquery');
-        window.jQuery = window.$ = require(jquerypath);
-
-    </script>
-
+    <script>AddJqueryToHtml()</script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    
+
 </body>
 </html>

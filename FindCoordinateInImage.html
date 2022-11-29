@@ -4,6 +4,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
   <title>Auto Form Filler</title>
+    
+    <script type="text/javascript" src="./js/AddJquery.js"></script>
 
   <base href="app://./" />  
 
@@ -34,14 +36,7 @@
 
     </script>
 
-  <script>
-
-    let path = require("path");
-    let jquerypath = path.join(__dirname, './js/jquery');
-    window.jQuery = window.$ = require(jquerypath);
-    
-  </script>
-
+  <script>AddJqueryToHtml()</script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   

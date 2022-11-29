@@ -7,6 +7,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Form Filler</title>
+    
+    <script type="text/javascript" src="./js/AddJquery.js"></script>
     <script  rel="stylesheet" src="./js/checkPathEChange.js"></script>
     <script type="text/javascript" src="./js/DragnDrop.js"></script>
     <script type="text/javascript" src="./js/Cancel.js"></script>
@@ -87,16 +89,10 @@
         DragnDrop2()
     
     </script>
-    <script>
 
-        let jquerypath = path.join(__dirname, './js/jquery');
-        window.jQuery = window.$ = require(jquerypath);
-
-    </script>
-
+    <script>AddJqueryToHtml()</script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-
 
 </body>
 </html>

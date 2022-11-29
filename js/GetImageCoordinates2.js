@@ -138,14 +138,7 @@ function CreateImageWithMarkerReturn2(newFileLocation){
 
     </script>
 
-  <script>
-
-    let path = require("path");
-    let jquerypath = path.join(__dirname, './js/jquery');
-    window.jQuery = window.$ = require(jquerypath);
-    
-  </script>
-
+  <script>AddJqueryToHtml()</script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
 

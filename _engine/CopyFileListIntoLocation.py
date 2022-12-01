@@ -11,118 +11,118 @@ extension = '.py'
 
 
 InputFileList00= '''getTableData
-  sys
-  edDataPyimageFolderLocation    
-  edDataPyexcelLocation    
-  edDataPyinternalLocation    
-  pdfToJpg
-  PrintTexListSerial
-              PyPDF2
- os   listdir
-  edDataPyFilesInDatabaseLocation    
-  os
-  ListToSentence
-  changeDirectory
- os path   isfile  join
-  base93Characterconversion
-  getTableData
-  edDataPyupdateNamesFile    
-  PrintTexListSerial
-  sys
-  StringToOrdList
-  getTableData
-  getTableData
-  checkIfValueInText
-  PrintTexListSerial
-  createSqliteTableFromList
-  re
-  getTableData
-  readSqlDatabase
-  shutil 
-  CloseEspecificWorkbook
-  CreateRow
-  StringListIntoList
-  os
-  writeToSqlite
-  DeleteAllFilesInFolder
-  getTableData
-  pandas 
-  readSqlDatabase
-  copyImageToAppFolderFromPython
- PIL   Image
-  copyImageToAppFolderFromPython
- PIL   ImageDraw 
-  os
-  pathlib
-  MultiplyTextSizeByImageHeight
-  getTableData
- PIL   ImageFont
-  PrintTexListSerial
-  os
-  edDataPyinternalLocation    
-  PrintTexListSerial
-  GetAllFontNamesFromFolderFunction
-  GetDbDataFunction
-  DeleteAllTempFiles
-  os
-  getTableData
-  createSqliteTableFromList
-  dropSqlTable
-  sys
-  edFNUDataPyDTs    
-  edDataPyDTs    
-  getTableData
-  DeleteAllTempFiles
-  CloseEspecificWorkbook
-  edDataPyexcelLocation    
-  edDataPyinternalLocation    
-  PrintTexListSerial
-  openWorkbook
-  os
-  getTableData
-  CloseEspecificWorkbook
-  edDataPyexcelLocation    
-  edDataPyinternalLocation    
-  closeWordWithHelp
-  openWorkbook
-  createSqliteTableFromList
-  dropSqlTable
-  os
-  getTableData
-  win32com client as win32
-  getTableData
-  pdfToJpg
- PIL   Image
-  RemoveExtraSlashes
-  copyImageToAppFolderFromPython
- PIL   ImageDraw 
-  StringListIntoList
-  os
-  pathlib
-  MultiplyTextSizeByImageHeight
-  getTableData
- PIL   ImageFont
-  GetFontFilePaths
- PIL   Image
-  copyImageToAppFolderFromPython
-  os
- PIL   ImageDraw 
-  MultiplyTextSizeByImageHeight
-  getTableData
- PIL   ImageFont
-  PrintTexListSerial
-  getTableData
-  re
-  CloseEspecificWorkbook
-  closeWordWithHelp
-  PrintTexListSerial
- sqlite3 dbapi2   Error
-  ForceCloseSpecificPaintFile
-  os
-  shutil
-  changeDirectory
-  getTableData
-  DeleteObjFromTable
+ sys
+             PyPDF2
+ pdfToJpg
+ os  listdir
+ importedDataPyexcelLocation   
+ changeDirectory
+ base93Characterconversion
+ PrintTexListSerial
+ importedDataPyinternalLocation   
+ importedDataPyupdateNamesFile   
+ os path  isfile  join
+ importedDataPyFilesInDatabaseLocation   
+ getTableData
+ importedDataPyimageFolderLocation   
+ os
+ ListToSentence
+ sys
+ StringToOrdList
+ PrintTexListSerial
+ getTableData
+ getTableData
+ checkIfValueInText
+ createSqliteTableFromList
+ PrintTexListSerial
+ readSqlDatabase
+ re
+ getTableData
+ shutil 
+ CreateRow
+ writeToSqlite
+ DeleteAllFilesInFolder
+ pandas 
+ readSqlDatabase
+ StringListIntoList
+ CloseEspecificWorkbook
+ os
+ getTableData
+ copyImageToAppFolderFromPython
+ PIL  ImageDraw 
+ copyImageToAppFolderFromPython
+ MultiplyTextSizeByImageHeight
+ pathlib
+ PIL  Image
+ getTableData
+ PIL  ImageFont
+ os
+ PrintTexListSerial
+ importedDataPyinternalLocation   
+ os
+ GetAllFontNamesFromFolderFunction
+ PrintTexListSerial
+ DeleteAllTempFiles
+ GetDbDataFunction
+ createSqliteTableFromList
+ getTableData
+ dropSqlTable
+ os
+ DeleteAllTempFiles
+ sys
+ importedFNUDataPyDTs   
+ importedDataPyDTs   
+ getTableData
+ openWorkbook
+ importedDataPyexcelLocation   
+ PrintTexListSerial
+ importedDataPyinternalLocation   
+ CloseEspecificWorkbook
+ getTableData
+ os
+ createSqliteTableFromList
+ dropSqlTable
+ openWorkbook
+ importedDataPyexcelLocation   
+ importedDataPyinternalLocation   
+ CloseEspecificWorkbook
+ closeWordWithHelp
+ getTableData
+ os
+ win32com client as win32
+ getTableData
+ pdfToJpg
+ PIL  ImageDraw 
+ copyImageToAppFolderFromPython
+ MultiplyTextSizeByImageHeight
+ pathlib
+ PIL  Image
+ RemoveExtraSlashes
+ StringListIntoList
+ getTableData
+ PIL  ImageFont
+ os
+ PIL  ImageDraw 
+ copyImageToAppFolderFromPython
+ MultiplyTextSizeByImageHeight
+ PIL  Image
+ GetFontFilePaths
+ getTableData
+ PIL  ImageFont
+ os
+ re
+ PrintTexListSerial
+ getTableData
+ shutil
+ sqlite3 dbapi2  Error
+ changeDirectory
+ PrintTexListSerial
+ CloseEspecificWorkbook
+ closeWordWithHelp
+ os
+ ForceCloseSpecificPaintFile
+ getTableData
+ DeleteObjFromTable
 '''
 
 InputFileList0 = InputFileList00.split('\n')

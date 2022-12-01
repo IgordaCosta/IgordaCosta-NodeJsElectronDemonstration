@@ -1,4 +1,0 @@
-import PutListDataIntoImageWithFontSizeFunction
-
-
-PutListDataIntoImageWithFontSizeFunction.PutListDataIntoImage()

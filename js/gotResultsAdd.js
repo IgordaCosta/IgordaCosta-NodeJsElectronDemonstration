@@ -21,8 +21,9 @@ function gotResultsAdd() {
     let  d1 = document.getElementById('BellowBody');
     d1.insertAdjacentHTML('afterbegin', ResultsObj);
 
+    try{
     document.getElementById("AllNormalItems").classList.add('hidden')
-
+    }catch{};
 
 
 }

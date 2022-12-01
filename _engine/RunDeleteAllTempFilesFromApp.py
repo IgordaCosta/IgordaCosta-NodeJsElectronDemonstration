@@ -1,4 +1,0 @@
-import DeleteAllTempFiles
-
-
-DeleteAllTempFiles.DeleteAllTempFiles()

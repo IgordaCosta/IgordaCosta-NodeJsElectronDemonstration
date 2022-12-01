@@ -390,7 +390,7 @@ def GetTableSingleItensSecuredData(ItemName, InPythonFunction=False):
 # import pprint
 # # pprint.pprint(GetAllTableSecuredData())
 
-# pprint.pprint(GetAllTableDictionarySecuredData())
+# pprint.pprint( GetAllTableDictionarySecuredData())
 
 
 # [ItemValues], ItemNames = GetAllTableSecuredData()

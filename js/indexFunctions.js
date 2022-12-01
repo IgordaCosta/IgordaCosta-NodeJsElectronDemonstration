@@ -6,6 +6,16 @@ function getCodeBlock(results){
 };
 
 
+function NotAvailableItem(){
+
+
+    console.log('This option is Not available in the Test Run!');
+
+}
+
+
+
+
 async function getCodeBlockFuncion(results){
 
     let IfFileFound = await results[results.length - (1)];

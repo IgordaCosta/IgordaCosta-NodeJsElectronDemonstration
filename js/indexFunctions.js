@@ -154,18 +154,14 @@ function getDatabaseData(){
 
     console.log(currentWorkingDirectory)
 
-    // let filenamecheck=path.basename(__dirname);
 
     let filenamecheck=path.basename(currentWorkingDirectory);
 
 
 
-    // if (filenamecheck=="CSSAutoFormFiller"){}else{
-    //     __dirname = path.join(__dirname, '../../../../../../');
 
 
 
-    // };
 
     filenameUsed=require('path').dirname(require.main.filename);
 
@@ -173,7 +169,6 @@ function getDatabaseData(){
     let {PythonShell} = require("python-shell");
     
     let opcoes = {
-        // scriptPath : path.join(__dirname, './_engine/'),
 
         scriptPath : path.join(currentWorkingDirectory, './_engine/'),
 
@@ -182,7 +177,6 @@ function getDatabaseData(){
         pythonPath: currentWorkingDirectory + '\\e564\\Scripts\\python',
     };
 
-    // console.log(__dirname)
     
     PythonShell.run('GetDbData.py', opcoes, function (err, results) {
         if (err) throw err;

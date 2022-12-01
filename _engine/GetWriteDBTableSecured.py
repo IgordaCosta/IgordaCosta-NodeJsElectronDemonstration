@@ -388,7 +388,9 @@ def GetTableSingleItensSecuredData(ItemName, InPythonFunction=False):
 # WriteTableSecuredIten(ItemName,ItenValue)
 
 # import pprint
-# pprint.pprint(GetAllTableSecuredData())
+# # pprint.pprint(GetAllTableSecuredData())
+
+# pprint.pprint(GetAllTableDictionarySecuredData())
 
 
 # [ItemValues], ItemNames = GetAllTableSecuredData()

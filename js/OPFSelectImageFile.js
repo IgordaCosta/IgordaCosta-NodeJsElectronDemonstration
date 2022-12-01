@@ -26,7 +26,6 @@ async function OPFSelectImageFile(){
 
   let DataGotten= await getDbDataSimple(AwaitProveData,TableName,Database);
 
-  // console.log(DataGotten);
 
   let PDFfile =  await DataGotten['PDFfile'];
 
@@ -43,8 +42,6 @@ async function OPFSelectImageFile(){
 
   }else{
 
-    // console.log("something is wrong with the value below it must be either true or false")
-    // console.log("PDFfile = " + PDFfile)
   }
 
 
@@ -74,13 +71,11 @@ async function ChoosenImage(IdChoosen){
   let node = document.getElementById(IdChoosen);
   let ImageName  = node.textContent || node.innerText;
 
-  // console.log(ImageName)
 
   textToRemove='Click to select '
 
   clickedImageName=ImageName.replace(textToRemove,'')
 
-  // console.log(clickedImageName)
 
   let AwaitProveData = 'getting tableData'
 
@@ -92,13 +87,11 @@ async function ChoosenImage(IdChoosen){
 
   let FolderImageSaveLocation = await DataGotten['FolderImageSaveLocation'];
 
-  // console.log(FolderImageSaveLocation)
 
 
   let pathUsed = FolderImageSaveLocation + clickedImageName 
   
 
-  // console.log(pathUsed)
 
   let data = 'true';
 
@@ -108,7 +101,6 @@ async function ChoosenImage(IdChoosen){
 
   let Done = await AddtoTablePromise(AwaitProveData, data, dataName, TableName, Database);
 
-  // console.log(Done)
 
 
 
@@ -134,8 +126,6 @@ function OPFSelectImageFile2(){
 
   const currentWorkingDirectory = process.cwd();
 
-  // const { fontSelect } = require(path.join(currentWorkingDirectory, './js/fontSelect'));
-  // const { CreateImageWithMarkerStep5Return } = require(path.join(currentWorkingDirectory, './js/CreateImageWithMarkerStep5Return'));
 
   const { OPFSelectImageFile3 } = require(path.join(currentWorkingDirectory, './js/OPFSelectImageFile3'));
 
@@ -153,7 +143,6 @@ function OPFSelectImageFile2(){
 
 
 
-  // PutListDataIntoImageWithFontSizeStep5
 
 
 
@@ -171,7 +160,6 @@ function PutListDataIntoImageWithFontSizeStep5(){
 
   const currentWorkingDirectory = process.cwd();
 
-  // const { fontSelect } = require(path.join(currentWorkingDirectory, './js/fontSelect'));
   const { CreateImageWithMarkerStep5Return } = require(path.join(currentWorkingDirectory, './js/CreateImageWithMarkerStep5Return'));
 
 

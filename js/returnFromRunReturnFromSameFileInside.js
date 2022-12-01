@@ -13,7 +13,7 @@ async function returnFromRunReturnFromSameFileInside(results) {
 
     const { AlteredOrOpenedDocument } = require(path.join(currentWorkingDirectory, "./js/AlteredOrOpenedDocument"));
 
-    
+
     
     // let copiedDoc = results[results.length - 2];
 

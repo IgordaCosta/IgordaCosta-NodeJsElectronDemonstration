@@ -71,9 +71,7 @@ async function GetImageCoordinates1(){
 
   AwaitProveData = 'Adding image locations to database';
 
-  // let data = [LocationToPlaceOnWebPage, LocationToAddFileOnApp];
 
-  // let dataName = ['LocationToPlaceOnWebPage', 'LocationToAddFileOnApp'];
 
   let data = [LocationToPlaceOnWebPage, LocationToAddFileOnApp, imageFolderLocation];
 

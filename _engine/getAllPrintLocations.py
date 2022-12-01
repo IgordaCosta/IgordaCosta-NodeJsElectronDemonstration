@@ -170,7 +170,7 @@ def getAllPrintLocations(extensionFilter = '', dataType = '', OtherString = ''):
 
 
 
-OtherString = 'require(path'
+OtherString = '.py'
 
 extensionFilter = 'js'
 

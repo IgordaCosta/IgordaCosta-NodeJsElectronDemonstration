@@ -1,12 +1,9 @@
 /*
  * jQuery.fontselect - A font selector for system fonts, local fonts and Google Web Fonts
  *
- * Made by Arjan Haverkamp, https://www.webgear.nl
- * Based on original by Tom Moor, http://tommoor.com
  * Copyright (c) 2011 Tom Moor, 2019-2020 Arjan Haverkamp
  * MIT Licensed
  * @version 1.0 - 2020-02-26
- * @url https://github.com/av01d/fontselect-jquery-plugin
  */
 
 (function($){
@@ -22,7 +19,6 @@
 			placeholderSearch: 'Search...',
 			searchable: true,
 			lookahead: 2,
-			googleApi: 'https://fonts.googleapis.com/css?family=',
 			localFontsUrl: '/fonts/',
 			systemFonts: 'Arial|Helvetica+Neue|Courier+New|Times+New+Roman|Comic+Sans+MS|Verdana|Impact'.split('|'),
 
@@ -1016,7 +1012,6 @@
 
 				var googleFonts = [];
 				for (var i = 0; i < o.googleFonts.length; i++) {
-					var item = o.googleFonts[i].split(':'); // Unna:regular,italic,700,700italic
 					var fontName = item[0], fontVariants = item[1] ? item[1].split(',') : [];
 					for (var v = 0; v < fontVariants.length; v++) {
 						googleFonts.push(fontName + ':' + fontVariants[v]);
@@ -1049,12 +1044,10 @@
 					}
 
 					this.keyActive = true;
-					if (e.keyCode == 27) {// Escape
 						stop(e);
 						this.toggleDropdown('hide');
 						return;
 					}
-					if (e.keyCode == 38) {// Cursor up
 						stop(e);
 						var $li = $('li.active', this.$results), $pli = $li.prev('li');
 						if ($pli.length > 0) {
@@ -1063,7 +1056,6 @@
 						}
 						return;
 					}
-					if (e.keyCode == 40) {// Cursor down
 						stop(e);
 						var $li = $('li.active', this.$results), $nli = $li.next('li');
 						if ($nli.length > 0) {
@@ -1072,7 +1064,6 @@
 						}
 						return;
 					}
-					if (e.keyCode == 13) {// Enter
 						stop(e);
 						$('li.active', this.$results).trigger('click');
 						return;
@@ -1098,7 +1089,6 @@
 
 					this.$select.click(__bind(function() { self.toggleDropdown('show') }, this));
 
-					// Call like so: $("input[name='ffSelect']").trigger('setFont', [fontFamily, fontWeight]);
 					this.$original.on('setFont', function(evt, fontFamily, fontWeight) {
 						fontWeight = fontWeight || 400;
 
@@ -1108,7 +1098,6 @@
 						if ($li.length == 0) {
 							fontSpec = fontFamily.replace(/ /g, '+');
 						}
-						// console.log(fontSpec);
 						$li = $("li[data-value='"+ fontSpec +"']", self.$results);
 						$('li.active', self.$results).removeClass('active');
 						$li.addClass('active');
@@ -1116,7 +1105,6 @@
 						self.$original.val(fontSpec);
 						self.updateSelected();
 						self.addFontLink($li.data('value'));
-						//$li.trigger('click'); // Removed 2019-10-16
 					});
 					this.$original.on('change', function() {
 						self.updateSelected();
@@ -1126,7 +1114,6 @@
 					if (this.options.searchable) {
 						this.$input.on('keyup', function() {
 							var q = this.value.toLowerCase();
-							// Hide options that don't match query:
 							$('li', self.$results).each(function() {
 								if ($(this).text().toLowerCase().indexOf(q) == -1) {
 									$(this).hide();
@@ -1147,7 +1134,6 @@
 
 				toggleDropdown: function(hideShow) {
 					if (hideShow === 'hide') {
-						// Make inactive
 						this.$element.off('keydown keyup');
 						this.query = '';
 						this.keyActive = false;
@@ -1155,7 +1141,6 @@
 						this.$drop.hide();
 						clearInterval(this.visibleInterval);
 					} else {
-						// Make active
 						this.$element.on('keydown', __bind(this.keyDown, this));
 						this.$element.on('keyup', __bind(this.keyUp, this));
 						this.$element.addClass('font-select-active');
@@ -1167,7 +1152,6 @@
 
 						/*
 						if (this.options.searchable) {
-							// Focus search box
 							$this.$input.focus();
 						}
 						*/
@@ -1178,7 +1162,6 @@
 					var font = $('li.active', this.$results).data('value');
 					this.$original.val(font).change();
 	 				this.updateSelected();
-					this.toggleDropdown('hide'); // Hide dropdown
 				},
 
 				moveToSelected: function() {
@@ -1226,7 +1209,6 @@
 						s = this.toStyle(systemFonts[i]);
 						style = 'font-family:' + s['font-family'];
 						if ((localFonts.length > 0 || googleFonts.length > 0) && i == systemFonts.length-1) {
-							style += ';border-bottom:1px solid #444'; // Separator after last system font
 						}
 						h += '<li data-value="'+ systemFonts[i] +'" data-query="' + systemFonts[i].toLowerCase() + '" style="' + style + '">' + r + '</li>';
 					}
@@ -1236,7 +1218,6 @@
 						s = this.toStyle(localFonts[i]);
 						style = 'font-family:' + s['font-family'];
 						if (googleFonts.length > 0 && i == localFonts.length-1) {
-							style += ';border-bottom:1px solid #444'; // Separator after last local font
 						}
 						h += '<li data-value="'+ localFonts[i] +'" data-query="' + localFonts[i].toLowerCase() + '" style="' + style + '">' + r + '</li>';
 					}
@@ -1298,15 +1279,12 @@
 						font = this.toReadable(font);
 						$('head').append("<style> @font-face { font-family:'" + font + "'; font-style:normal; font-weight:400; src:local('" + font + "'), url('" + this.options.localFontsUrl + font + ".woff') format('woff'); } </style>");
 					}
-					// System fonts need not be loaded!
 				}
-			}; // End prototype
 
 			return Fontselect;
 		})();
 
 		return this.each(function() {
-			// If options exist, merge them
 			if (options) { $.extend(settings, options); }
 
 			return new Fontselect(this, settings);

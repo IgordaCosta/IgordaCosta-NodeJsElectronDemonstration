@@ -7,7 +7,6 @@ async function CreateImageWithMarkerStep5Return() {
 
   const currentWorkingDirectory = process.cwd();
 
-  // const { fontSelect } = require(path.join(currentWorkingDirectory, './js/fontSelect'));
   const { getDbDataSimple } = require(path.join(currentWorkingDirectory, './js/getDbDataSimple'));
 
   const { CreateImageWithMarkerStep5Return2 } = require(path.join(currentWorkingDirectory, "./js/CreateImageWithMarkerStep5Return2"));
@@ -23,7 +22,6 @@ async function CreateImageWithMarkerStep5Return() {
 
   let DataGotten = await getDbDataSimple(AwaitProveData, TableName, Database);
 
-  // console.log(DataGotten)
 
   let newFileLocation = await DataGotten['LocationToPlaceOnWebPage'];
 
@@ -40,16 +38,12 @@ async function CreateImageWithMarkerStep5Return() {
 
 
 
-  // console.log(FontSize);
-
-  // console.log('FontSize above');
 
 
 
 
-  // console.log(newFileLocation);
 
-  // console.log('newFileLocation above');
+
 
   
   CreateImageWithMarkerStep5Return2(newFileLocation, FontSize, tableTitles, tableData);

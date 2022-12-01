@@ -1,5 +1,5 @@
 {
-  "name": "autoformfiller",
+  "name": "automaticform",
   "version": "1.0.0",
   "description": "Fills forms automatically",
   "main": "index.js",
@@ -8,10 +8,9 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [
-    "Auto",
-    "Form",
-    "Filler"
-  ],
+    "Automatic",
+    "Form"
+    ],
   "author": "Igor Meira da Costa",
   "license": "ISC",
   "devDependencies": {

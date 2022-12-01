@@ -1,1 +1,0 @@
-let imageFolderLocation='_clientImageFiles\\';

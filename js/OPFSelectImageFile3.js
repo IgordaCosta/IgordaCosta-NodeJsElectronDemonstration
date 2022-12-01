@@ -22,14 +22,12 @@ async function OPFSelectImageFile3() {
 
   let DataGotten = await getDbDataSimple(AwaitProveData, TableName, Database);
 
-//   console.log(DataGotten)
 
 
   let tableTitles = await DataGotten['tableTitles'];
 
   let tableData = await DataGotten['tableData'];
 
-  // console.log(tableTitles)
 
 
   OPFSelectImageFile4(tableTitles, tableData)

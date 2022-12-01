@@ -1,5 +1,3 @@
-// const { callbackify } = require("util");
-// const { AddTwoDataToListsSave } = require("./AddTwoDataToListsSave");
 
 
 
@@ -58,23 +56,16 @@ async function CreateImageWithMarkerReturn(){
   let newFileLocation = await DataGotten['LocationToPlaceOnWebPage'];
 
   
-  // let newFileLocation2 = DataGotten['asdfasdfasdfsdf']
-
-    // console.log(newFileLocation2)
-
-    // console.log(newFileLocation2==undefined)
-
-    // console.log("wrong table data above")
 
 
 
 
 
-  // console.log(newFileLocation)
 
-  // console.log('newFileLocation above')
 
-  // console.log('this is the location of the image file that will show above')
+
+
+
 
 
 
@@ -85,9 +76,7 @@ async function CreateImageWithMarkerReturn(){
 
 function CreateImageWithMarkerReturn2(newFileLocation){
 
-    // console.log(newFileLocation)
 
-    // console.log("newFileLocation inside new function")
 
     document.body.innerHTML = `
     <div class=text>

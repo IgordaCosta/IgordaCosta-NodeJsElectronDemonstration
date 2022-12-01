@@ -18,7 +18,6 @@ function RunPythonFile(filename, callback, gotResultsFuction=true, dataUsed = ''
     
     if (gotResultsFuction){
         
-        // const { gotResults } = require(path.join(currentWorkingDirectory,"./js/gotResults"));
 
         const { gotResultsAdd } = require(path.join(currentWorkingDirectory,"./js/gotResultsAdd"));
 
@@ -27,25 +26,20 @@ function RunPythonFile(filename, callback, gotResultsFuction=true, dataUsed = ''
         
 
         gotResultsAdd();
-        // gotResults();
     
     }else{};
     
 
-    // console.log("LoadMultipleFile function Started");
 
 
     let { PythonShell } = require("python-shell");
 
-    // let PythonPathUsed = 'C:\\ProgramData\\Anaconda3\\python'
 
     let PythonPathUsed = currentWorkingDirectory + '\\e564\\Scripts\\python';
 
     let opcoes;
 
-    // console.log(NoArgs);
 
-    // console.log('NoArgs above');
 
 
     if (NoArgs){
@@ -69,7 +63,6 @@ function RunPythonFile(filename, callback, gotResultsFuction=true, dataUsed = ''
         if (err)
             throw err;
 
-            // console.log(results);
 
             resolve(results);
 
@@ -103,20 +96,16 @@ function RunPythonFile(filename, callback, gotResultsFuction=true, dataUsed = ''
     }else{};
     
 
-    // console.log("LoadMultipleFile function Started");
 
 
     let { PythonShell } = require("python-shell");
 
-    // let PythonPathUsed = 'C:\\ProgramData\\Anaconda3\\python'
 
     let PythonPathUsed = currentWorkingDirectory + '\\e564\\Scripts\\python';
 
     let opcoes;
 
-    // console.log(NoArgs);
 
-    // console.log('NoArgs above');
 
 
     if (NoArgs){
@@ -140,7 +129,6 @@ function RunPythonFile(filename, callback, gotResultsFuction=true, dataUsed = ''
         if (err)
             throw err;
 
-        // console.log(results);
 
         
     callback(results);

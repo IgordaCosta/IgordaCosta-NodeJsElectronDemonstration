@@ -30,7 +30,7 @@ function OPFSelectImageFile4(tableTitles, tableData) {
 
     // console.log(tableTitles)
 
-    document.body.innerHTML =
+    ResultsObj =
     // document.documentElement.innerHTML=
     `
 
@@ -111,11 +111,10 @@ function OPFSelectImageFile4(tableTitles, tableData) {
 
     </script>
 
-    <script>AddJqueryToHtml()</script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+  `;
 
-  `
+let  d1 = document.getElementById('AllNormalItems');
+    d1.insertAdjacentHTML('afterbegin', ResultsObj);
 
 }
 exports.OPFSelectImageFile4 = OPFSelectImageFile4;

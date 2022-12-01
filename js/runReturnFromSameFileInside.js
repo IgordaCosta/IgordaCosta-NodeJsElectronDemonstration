@@ -19,7 +19,6 @@ function runReturnFromSameFileInside() {
 
     RunPythonFile(filename, callback);
 
-    // console.log('here')
 
 
 

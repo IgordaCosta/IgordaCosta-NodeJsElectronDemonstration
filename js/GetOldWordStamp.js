@@ -21,7 +21,6 @@ function GetOldWordStamp(){
     
 
 
-    // let callback = MarkExcellSheet
     let callback = MarkWordSheet
 
     RunPythonFile(filename,callback)

@@ -6,7 +6,7 @@
   
 
     "default_locale": "br",
-    "description": "CSS Auto Form Filler App",
+    "description": "CSS Automatic Form App",
 
 
     "content_security_policy": "script-src 'self' app:; script-src 'nonce-6BdSug0qQ+IzjffO7tY2sg==' ;object-src 'self' app:; script-src 'self' app: sha256-ba+pQuUwqk1IpUuny3+HCcnZzydBS1oHcaNY314iR9Y=;"

@@ -90,11 +90,8 @@ function Cancel (){
 
 };
 
-// function OtherFunctions(){
 
-//     location.replace("OtherFunctions.html");
 
-// };
 
 
 function jasonRerunReturnFromSameFileInside(){

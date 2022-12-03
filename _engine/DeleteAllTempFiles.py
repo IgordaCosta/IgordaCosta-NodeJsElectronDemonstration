@@ -6,6 +6,7 @@ from importedDataPyAutoFormFillerKey import *
 
 import DeleteAllFilesInFolder
 import FilePathFromPython
+import CreateFolderInFolder
 
 
 
@@ -15,17 +16,24 @@ def DeleteAllTempFiles():
     currentWorkingDirectory = str(FilePathFromPython.FilePathFromPython()) +'\\'
     home = os.path.expanduser('~')
 
+    AutoForm_FillerFilesAddLocation = os.path.join(home, internalLocation, AutoForm_FillerFiles,'Temp') + '\\'
+
+    
+    CreateFolderInFolder.CreateFolderInFolder(AutoForm_FillerFilesAddLocation)
+
+
     LocationToDeleteFIlesList= [
 
             currentWorkingDirectory,
             currentWorkingDirectory  + imageFolderLocation + '\\' ,
-
-            os.path.join(home, internalLocation, AutoForm_FillerFiles,'Temp') + '\\'
+                        
+            AutoForm_FillerFilesAddLocation
 
         ]
 
 
     for locationToDelete in LocationToDeleteFIlesList:
+        print(locationToDelete)
         DeleteAllFilesInFolder.DeleteAllFilesInFolder(locationToDelete)
 
 
@@ -36,4 +44,4 @@ def DeleteAllTempFiles():
 
 
     
-# DeleteAllTempFiles()
+DeleteAllTempFiles()

@@ -7,6 +7,7 @@ import pathlib
 import getTableData
 import copyImageToAppFolderFromPython
 import MultiplyTextSizeByImageHeight
+import resizeImage
 
 
 def CreateImageWithMarker():
@@ -38,8 +39,15 @@ def CreateImageWithMarker():
 
     TextToPut = ".XXXXXXX."
 
-    img = Image.open(OriginalImageLocation0)
 
+    try:
+        img = Image.open(OriginalImageLocation0)
+    
+    except:
+        resizeImage.resizeImage(InputLocation=OriginalImageLocation0, SaveLocation=OriginalImageLocation0)
+        img = Image.open(OriginalImageLocation0)
+
+        
     draw = ImageDraw.Draw(img)
 
     homedir = pathlib.Path.home()

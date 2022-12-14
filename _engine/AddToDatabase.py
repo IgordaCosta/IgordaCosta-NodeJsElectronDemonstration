@@ -43,10 +43,17 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
 
         if ExtensionUsed == 'pdf':
 
-            import PyPDF2
-            file = open(fname, 'rb')
-            readpdf = PyPDF2.PdfFileReader(file)
-            totalpages = readpdf.numPages
+            # import PyPDF2
+            # file = open(fname, 'rb')
+            # readpdf = PyPDF2.PdfFileReader(file)
+            # totalpages = readpdf.numPages
+            # pathToPdfFile = FolderLocation +  '//' + PdfFileName
+            import pypdfium2 as pdfium
+
+            pdf = pdfium.PdfDocument(fname)
+            totalpages = len(pdf)
+
+
             if totalpages == 1:
 
                 FolderLocation = '\\'.join(fname.split('\\')[:-1]) + '\\'

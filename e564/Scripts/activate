@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Tigereye\Desktop\Apps\CSSAutoFormFiller2\CSSAutoFormFiller\e564"
+VIRTUAL_ENV="C:\Users\Tigereye\Desktop\Apps\CSSAutoFormFiller2_AddToDatabase\CSSAutoFormFiller\IgordaCosta-NodeJsElectronDemonstration\e564"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

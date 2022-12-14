@@ -1,20 +1,24 @@
-from pdf2image.exceptions import (
-    PDFInfoNotInstalledError,
-    PDFPageCountError,
-    PDFSyntaxError
-)
-import os
-
-from pdf2image import convert_from_path
-import PyPDF2
-import base93Characterconversion
+import pypdfium2 as pdfium
 
 
 
 
+# print(imgFileName)
 
+
+
+
+# def pdfToJpg2Function(FolderLocation,PdfFileName,FolderSaveLocation='',OutputFilename=''):
+#     print('here')
+#     if __name__ == '__main__':
+#         print('here2')
+#         pdfToJpg(FolderLocation,PdfFileName,FolderSaveLocation=FolderSaveLocation,OutputFilename=OutputFilename)
 
 def pdfToJpg(FolderLocation,PdfFileName,FolderSaveLocation='',OutputFilename=''):
+
+
+
+    # print('ok')
 
     if OutputFilename=='':
 
@@ -30,81 +34,60 @@ def pdfToJpg(FolderLocation,PdfFileName,FolderSaveLocation='',OutputFilename='')
         remove=OutputFilename.split(".")[-1]
         OutputFilename=OutputFilename.strip("."+remove)
 
-   
-    PdfFileNameFinal=FolderLocation+PdfFileName
-
-    
-    NOError  = True
-    try:
-        images = convert_from_path(PdfFileNameFinal)
-    except Exception as e:
-        compareSizes = [int(x) for x in str(e).replace('(','').replace(')','').split(' ') if x.isnumeric()]
-        print(compareSizes)
-        NOError =False
-
-    if NOError == False:
-        percentageToComare = round((compareSizes[1]/compareSizes[0]) * 0.6, 2)
-
-        NumOfPages = PyPDF2.PdfFileReader(PdfFileNameFinal).getNumPages()
-
-        TextTOAdd = base93Characterconversion.base93Characterconversion()
-
-        PdfFileNameFinal2 = '.'.join(PdfFileNameFinal.split('.')[:-1]) + TextTOAdd + '.pdf'
 
 
-        for i in range(NumOfPages):
-            pdf = PyPDF2.PdfFileReader(PdfFileNameFinal)
-            page0 = pdf.getPage(i)
-            page0.scaleBy(percentageToComare)  # float representing scale factor - this happens in-place
-            writer = PyPDF2.PdfFileWriter()  # create a writer to save the updated results
-            writer.addPage(page0)
-            with open(PdfFileNameFinal2, "wb+") as f:
-                writer.write(f)
-        
-        images = convert_from_path(PdfFileNameFinal2)
+    pathToPdfFile = FolderLocation +  '//' + PdfFileName
 
-    filenames=[]
-    i=0
-    for page in images:
-        i=i+1
-        if len(images) >1:
+    pdf = pdfium.PdfDocument(pathToPdfFile)
+    n_pages = len(pdf)  # get the number of pages in the document
+
+
+    page_indices = [i for i in range(n_pages)]  # all pages
+    renderer = pdf.render_to(
+        pdfium.BitmapConv.pil_image,
+        page_indices = page_indices,
+        scale = 200/72,  # 300dpi resolution
+    )
+
+    # print('ok2')
+    # if __name__ == '__main__':
+    # print('in function')
+    filenames = []
+    # for i, image in zip(page_indices, renderer):
+    i = 0
+    for image in renderer:
+        # print(image)
+        i = i + 1
+        if n_pages >1:
             newFileName=OutputFilename+"_"+str(i)+'.jpg'
+
         else:
             newFileName=OutputFilename+'.jpg'
-
-        pagefilename=FolderSaveLocation +newFileName
-
-        page.save(pagefilename, 'JPEG')
         
+        pagefilename=FolderSaveLocation + '//' + newFileName
+
+        # print(filenames)
+        
+        image.save(pagefilename)
+
         filenames.append(newFileName)
-        
-    
-    try:
-        os.remove(PdfFileNameFinal2)
-    except:
-        pass
 
-    if i==1:
+    if n_pages==1:
+        # print(newFileName)
         return newFileName
+
     else:
+        # print(filenames)
         return filenames
 
 
 
-    
 
-    
+# FolderLocation = r'C:\Users\Tigereye\Desktop\New folder\New folder' + '\\'
 
-
-
-
-# FolderLocation= r'C:\Users\Tigereye\Desktop' + '\\'
-
-# PdfFileName="adosMultaFacesIsabela.pdf"
-
-# OutputFilename='adosMultaFacesIsabela'
+# PdfFileName = 'PASSOS PARA ATIVAÇÃO DO SEU OFFICE 2019 (2) (2) (1) (4) (1) (1) (1) (1) (4) (1) (1)_aRy4vDN.pdf'
 
 
+# # PdfFileName = 'Document 9.pdf'
 
-
-# pdfToJpg(FolderLocation=FolderLocation,PdfFileName=PdfFileName,OutputFilename=OutputFilename)
+# pdfToJpg(FolderLocation,PdfFileName,FolderSaveLocation='',OutputFilename='')

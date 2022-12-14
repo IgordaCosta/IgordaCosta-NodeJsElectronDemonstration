@@ -2,7 +2,6 @@ import os
 from os import listdir
 from os.path import isfile, join
 
-# from importedDataPyDTs import *
 from importedDataPyimageFolderLocation import *
 from importedDataPyinternalLocation import *
 from importedDataPyexcelLocation import *
@@ -14,22 +13,11 @@ import getTableData
 import ListToSentence
 import pdfToJpg
 import PrintTexListSerial
-# import DeleteAllFilesInFolder
 import base93Characterconversion
-# import GBTdat
-
-
-# print(updateNamesFile)
-
-# print('updateNamesFile')
 
 
 
 def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
-
-    # GBTdat.WriteFl(fileName=fileNameUsed)
-
-
 
     ListToPrint = []
 
@@ -44,11 +32,6 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
         updateNamesFile=updateNamesFile0.split('.')[0]
         FilesInDatabaseLocation=FilesInDatabaseLocation0.split('.')[0]
 
-    # print(updateNamesFile)
-
-    # print('updateNamesFile')
-
-        
     
     home = os.path.expanduser('~')
     
@@ -69,8 +52,15 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
                 FolderLocation = '\\'.join(fname.split('\\')[:-1]) + '\\'
                 PdfFileName = fname.split('\\')[-1]
 
+                # print(FolderLocation)
+
+                # print(PdfFileName)
+
                 filenameOutputUsed = pdfToJpg.pdfToJpg(FolderLocation= FolderLocation,PdfFileName=PdfFileName)
 
+                print(filenameOutputUsed)
+
+                #already added the '\\' above
                 NewFileFocus = FolderLocation + filenameOutputUsed
 
                 PDFfile ='true'
@@ -93,7 +83,6 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
         TempFolderLocation = filePath +"\\Temp"
 
         try:
-            # os.makedirs(filePath +"\\Temp")
             os.makedirs(TempFolderLocation)
         except FileExistsError:
             # directory already exists
@@ -103,14 +92,8 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
             if PDFfile =='true':
                 pass
             else:  
-                # DeleteAllFilesInFolder.DeleteAllFilesInFolder(LocationToDeleteFIles = LocationToDeleteFIles)
                 pass
-
-            # pass
-        
-        # newFileLocation=filePath +"\\Temp\\temp_" + fileNameOnly
-
-        # newFileLocation=  TempFolderLocation + "\\temp_" + fileNameOnly
+     
 
         FileEnding = base93Characterconversion.base93Characterconversion()
 
@@ -134,9 +117,6 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
 
 
         if checkLocationOk:
-            # newFileLocationImg =  filePath +"\\Temp\\" + fileNameOnly
-
-            # TempFolderLocation = filePath +"\\Temp"
 
             newFileLocationImg =  TempFolderLocation +"\\" + fileNameOnly
 
@@ -157,8 +137,7 @@ def AddToDatabase(updateNamesFile, FilesInDatabaseLocation, fname=""):
             getTableData.MultipleDictionaryWriteDataDatabase(DictionaryAdd=Dictionary)
 
             ListToPrint.append('FileDoesNOTExist')
-
-        
+       
         PrintTexListSerial.PrintTexListSerial(ListToPrint=ListToPrint)
 
 

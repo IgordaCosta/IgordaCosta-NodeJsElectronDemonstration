@@ -27,7 +27,19 @@ def copyImageToAppFolder(JustSwitchEnding = False):
 
     if PDFfile == 'true':
 
-        newFileLocation = TableDataGotten['newFileLocationImg']
+        FolderImageSaveLocation = TableDataGotten['FolderImageSaveLocation']        #added
+
+        if FolderImageSaveLocation == '':
+            newFileLocation = TableDataGotten['newFileLocationImg']  
+
+        else:
+            fileNameOnly = TableDataGotten['fileNameOnly']       #added
+            newFileLocation = FolderImageSaveLocation + '\\' + fileNameOnly         #added       
+
+        
+            
+                                                                       
+                                                                       
         pass
     elif PDFfile =='false':
 
@@ -50,8 +62,8 @@ def copyImageToAppFolder(JustSwitchEnding = False):
          LocationNameOnly = TableDataGotten['fileNameOnly']
 
 
-    print(LocationToAddFileOnApp0)
-    print(LocationToPlaceOnWebPage0)
+    # print(LocationToAddFileOnApp0)
+    # print(LocationToPlaceOnWebPage0)
 
     FileEnding = base93Characterconversion.base93Characterconversion()
 
@@ -65,11 +77,11 @@ def copyImageToAppFolder(JustSwitchEnding = False):
 
     getTableData.MultipleListWriteDataDatabase(dataList=dataList,dataNameList=dataNameList)
 
-    print(LocationToAddFileOnApp)
+    # print(LocationToAddFileOnApp)
   
     LocationToDeleteFIles = '\\'.join(LocationToAddFileOnApp.replace('/','\\').split('\\')[:-1]) + '\\'
 
-    print(LocationToDeleteFIles)
+    # print(LocationToDeleteFIles)
 
     if JustSwitchEnding:
         newFileLocation2 = LocationToAddFileOnApp0
@@ -79,6 +91,13 @@ def copyImageToAppFolder(JustSwitchEnding = False):
         newFileLocation2 = newFileLocation
 
 
+    print(newFileLocation2)
+    print('newFileLocation2')
+
+    print(LocationToAddFileOnApp)
+    print('LocationToAddFileOnApp')
+
+    
     CopiedFile = CopiedFileFunction(newFileLocation2,LocationToAddFileOnApp)
 
     # if JustSwitchEnding:
@@ -159,4 +178,4 @@ def ReplaceEndingFunction(TextToChange, FileEnding, OriginalFileName):
 
 
 
-# copyImageToAppFolderFromPython()   #### delete after test
+# copyImageToAppFolderFromPython()   #### block after test

@@ -1,0 +1,22 @@
+{
+  "build": "hd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [],
+  "features": "",
+  "fn": "poppler-data-0.4.11-hd8ed1ab_0.tar.bz2",
+  "license": "Adobe+GPLv2",
+  "license_family": "GPL",
+  "md5": "abc27381c4f005da588cffa1f76403ee",
+  "name": "poppler-data",
+  "noarch": "generic",
+  "package_type": "noarch_generic",
+  "sha256": "ccd2857627c0f6e903a917b99e60860c0a2b7dc553a32cf7c1ab55f0af99ec11",
+  "size": 3816423,
+  "subdir": "noarch",
+  "timestamp": 1631025787421,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/poppler-data-0.4.11-hd8ed1ab_0.tar.bz2",
+  "version": "0.4.11"
+}

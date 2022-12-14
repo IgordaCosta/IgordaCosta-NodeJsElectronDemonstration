@@ -89,7 +89,7 @@ async function ChoosenImage(IdChoosen){
 
 
 
-  let pathUsed = FolderImageSaveLocation + clickedImageName 
+  let pathUsed = FolderImageSaveLocation + '\\' + clickedImageName 
   
 
 

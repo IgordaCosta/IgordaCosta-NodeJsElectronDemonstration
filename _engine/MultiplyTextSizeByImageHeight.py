@@ -18,8 +18,11 @@ def MultiplyTextSizeByImageHeight(Location, ImageName = ''):
     LocationToAddFileOnApp = getTableData.GetTableData()['LocationToAddFileOnApp']
 
 
+    if ImageName == '':
+        CompleteLocation = Location
 
-    CompleteLocation = Location + ImageName
+    else:
+        CompleteLocation = Location + '\\' + ImageName
 
 
     NewCompleteLocationFileName0 = CompleteLocation.split('\\')[-1]
@@ -33,7 +36,7 @@ def MultiplyTextSizeByImageHeight(Location, ImageName = ''):
 
     NewLocation = '\\'.join(LocationToAddFileOnApp.split('\\')[:-1]) + '\\'
 
-    NewCompleteLoation = NewLocation + NewCompleteLocationFileName
+    NewCompleteLoation = NewLocation  + NewCompleteLocationFileName
 
     # print(NewCompleteLoation)
 

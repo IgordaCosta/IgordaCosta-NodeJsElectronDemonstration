@@ -3,7 +3,7 @@ Works on Windows 8.1 / 10 / 11
 To run the app:
     Create a virtual environment using the name e564 
     and update it with the requirements.txt file
-        > remember to delete the e564 first
+        > remember to delete the e564 folder first
 
     # This installs the virtual environment module
     pip install virtualenv

@@ -8,13 +8,13 @@ To run the app:
     # This installs the virtual environment module
     pip install virtualenv
     
-    # creates a virtual environment using the module
+    # Creates a virtual environment using the module
     python -m venv e564
 
-    # activates the virtual environment
+    # Activates the virtual environment
     e564\Scripts\activate
 
-    # installs the required modules with the correct versions
+    # Installs the required modules with the correct versions
     pip install -r requirements.txt
    
     #start app
